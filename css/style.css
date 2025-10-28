@@ -34,7 +34,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -84,7 +83,7 @@ nav {
 
 /* Hero Section */
 #home {
-    min-height: 100vh;
+    min-height: 150vh;
     display: flex;
     align-items: center;
     justify-content: center;

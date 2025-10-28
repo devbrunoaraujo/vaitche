@@ -9,7 +9,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">#VAITCHÊ</div>
+            <a href="#home" class="logo" onclick="scrollToSection('home')">
+                <img src="img/logo/logo.png" alt="#VAITCHÊ" loading="lazy" style="width: 135px; height: auto;">
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a onclick="scrollToSection('home')">Início</a></li>
                 <li><a onclick="scrollToSection('recursos')">Recursos</a></li>
@@ -33,21 +35,14 @@
                     Mobilidade Urbana
                     <span>#VAITCHÊ</span>
                 </h1>
-                <p>Conectando motociclistas entregadores e passageiros com rapidez, segurança e eficiência. A revolução da mobilidade urbana chegou!</p>
+                <p>Conectando motociclistas entregadores e passageiros com rapidez, segurança e eficiência. A revolução da mobilidade urbana chegou na Rainha da Fronteira!</p>
                 <div class="hero-buttons">
                     <button class="btn-primary" onclick="scrollToSection('download')">Baixar Agora</button>
                     <button class="btn-secondary" onclick="scrollToSection('como-funciona')">Saiba Mais</button>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=1200&fit=crop&q=80" alt="Motociclista">
-                        <div class="phone-overlay">
-                            <h3>#VAITCHÊ</h3>
-                        </div>
-                    </div>
-                </div>
+                <img src="img/mockup-home.png" alt="Mockup real do app #VAITCHÊ mostrando a tela do motociclista"  style="width:450px;max-width:100%;height:auto;display:block;" loading="lazy">
             </div>
         </div>
     </section>
@@ -145,7 +140,7 @@
     <section id="parceiro">
         <div class="parceiro-container">
             <div class="parceiro-image">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1000&fit=crop&q=80" alt="Motociclista Parceiro">
+                <img src="img/img_motociclista.png" alt="Motociclista Parceiro" style="width:100%;max-width:100%;height:auto;display:block;object-fit:contain;" loading="lazy">
             </div>
             <div class="parceiro-content">
                 <h2>Gostaria de ser um <span>motociclista parceiro?</span></h2>
@@ -177,7 +172,7 @@
                                 <polyline points="22 4 12 14.01 9 11.01"/>
                             </svg>
                         </div>
-                        <span class="benefit-text">Receba seus ganhos semanalmente</span>
+                        <span class="benefit-text">Receba seus ganhos na hora</span>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">
@@ -201,13 +196,13 @@
         <h2 class="section-title">Baixe Agora o <span style="color: var(--yellow);">#VAITCHÊ</span></h2>
         <p style="font-size: 1.2rem; margin-bottom: 1rem;">Disponível para iOS e Android</p>
         <div class="download-buttons">
-            <a href="#" class="app-button">
-                <span style="font-size: 2rem;">📱</span>
-                App Store
+            <a href="#" class="app-button" aria-label="App Store">
+                <img src="img/logo/app-store.png" alt="Disponível na App Store" class="app-badge"
+                     style="width: 75px;px;height:auto;display:block;" loading="lazy">
             </a>
-            <a href="#" class="app-button">
-                <span style="font-size: 2rem;">🤖</span>
-                Google Play
+            <a href="#" class="app-button" aria-label="Google Play">
+                <img src="img/logo/playstore.png" alt="Disponível no Google Play" class="app-badge"
+                     style="width: 75px;px;height:auto;display:block;" loading="lazy">
             </a>
         </div>
     </section>
