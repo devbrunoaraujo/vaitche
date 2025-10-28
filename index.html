@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>#VAITCHÊ - Mobilidade Urbana Inteligente</title>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">#VAITCHÊ</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="scrollToSection('home')">Início</a></li>
+                <li><a onclick="scrollToSection('recursos')">Recursos</a></li>
+                <li><a onclick="scrollToSection('como-funciona')">Como Funciona</a></li>
+                <li><a onclick="scrollToSection('download')">Download</a></li>
+            </ul>
+            <button class="cta-button" onclick="scrollToSection('download')">Baixar App</button>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    Mobilidade Urbana
+                    <span>#VAITCHÊ</span>
+                </h1>
+                <p>Conectando motociclistas entregadores e passageiros com rapidez, segurança e eficiência. A revolução da mobilidade urbana chegou!</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('download')">Baixar Agora</button>
+                    <button class="btn-secondary" onclick="scrollToSection('como-funciona')">Saiba Mais</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=1200&fit=crop&q=80" alt="Motociclista">
+                        <div class="phone-overlay">
+                            <h3>#VAITCHÊ</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos">
+        <h2 class="section-title">Por que escolher o <span>#VAITCHÊ</span>?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <h3>Rapidez Incomparável</h3>
+                <p>Chegue ao seu destino mais rápido com nossos motociclistas especializados em rotas urbanas eficientes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Segurança em Primeiro</h3>
+                <p>Todos os motociclistas são verificados e treinados. Viaje com tranquilidade e proteção garantida.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Preços Justos</h3>
+                <p>Tarifas transparentes e competitivas. Sem surpresas, você sabe quanto vai pagar antes de solicitar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                    </svg>
+                </div>
+                <h3>App Intuitivo</h3>
+                <p>Interface simples e fácil de usar. Solicite sua corrida em poucos toques.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <h3>Avaliações</h3>
+                <p>Sistema de avaliação mútua para garantir a melhor experiência para todos os usuários.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <h3>Sustentável</h3>
+                <p>Contribua para um trânsito mais fluido e redução de emissões com transporte eficiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona">
+        <h2 class="section-title">Como <span>Funciona</span>?</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Baixe o App</h3>
+                <p>Faça o download gratuito do #VAITCHÊ na sua loja de aplicativos favorita.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Cadastre-se</h3>
+                <p>Crie sua conta rapidamente com dados básicos e forma de pagamento.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Solicite Corrida</h3>
+                <p>Informe seu destino e confirme. Um motociclista chegará em minutos!</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Chegue Rápido</h3>
+                <p>Aproveite a agilidade do transporte de moto e chegue ao seu destino!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <h2 class="section-title">Baixe Agora o <span style="color: var(--yellow);">#VAITCHÊ</span></h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Disponível para iOS e Android</p>
+        <div class="download-buttons">
+            <a href="#" class="app-button">
+                <span style="font-size: 2rem;">📱</span>
+                App Store
+            </a>
+            <a href="#" class="app-button">
+                <span style="font-size: 2rem;">🤖</span>
+                Google Play
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 #VAITCHÊ - Mobilidade Urbana Inteligente. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
