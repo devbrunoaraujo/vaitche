@@ -1,4 +1,3 @@
-
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     const headerHeight = 80;

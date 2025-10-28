@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>#VAITCHÊ - Mobilidade Urbana Inteligente</title>
-   
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -15,6 +14,7 @@
                 <li><a onclick="scrollToSection('home')">Início</a></li>
                 <li><a onclick="scrollToSection('recursos')">Recursos</a></li>
                 <li><a onclick="scrollToSection('como-funciona')">Como Funciona</a></li>
+                <li><a onclick="scrollToSection('parceiro')">Seja Parceiro</a></li>
                 <li><a onclick="scrollToSection('download')">Download</a></li>
             </ul>
             <button class="cta-button" onclick="scrollToSection('download')">Baixar App</button>
@@ -142,6 +142,61 @@
         </div>
     </section>
 
+    <section id="parceiro">
+        <div class="parceiro-container">
+            <div class="parceiro-image">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1000&fit=crop&q=80" alt="Motociclista Parceiro">
+            </div>
+            <div class="parceiro-content">
+                <h2>Gostaria de ser um <span>motociclista parceiro?</span></h2>
+                <p>Junte-se à nossa rede de parceiros e tenha autonomia para trabalhar quando e onde quiser. Maximize seus ganhos com tecnologia de ponta!</p>
+                
+                <div class="parceiro-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <span class="benefit-text">Ganhe até 30% a mais que outros apps</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="benefit-text">Flexibilidade total de horários</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <span class="benefit-text">Receba seus ganhos semanalmente</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <span class="benefit-text">Suporte dedicado 24/7</span>
+                    </div>
+                </div>
+
+                <a href="#download" class="btn-parceiro" onclick="scrollToSection('download')">Baixar App e Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
     <section id="download">
         <h2 class="section-title">Baixe Agora o <span style="color: var(--yellow);">#VAITCHÊ</span></h2>
         <p style="font-size: 1.2rem; margin-bottom: 1rem;">Disponível para iOS e Android</p>
@@ -161,6 +216,6 @@
         <p>&copy; 2025 #VAITCHÊ - Mobilidade Urbana Inteligente. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
