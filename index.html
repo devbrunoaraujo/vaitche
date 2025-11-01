@@ -3,213 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#VAITCHÊ - Mobilidade Urbana Inteligente</title>
-   <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Vaitchê - Conectando motociclistas e passageiros em Bagé. Mobilidade urbana rápida, segura e eficiente.">
+    <meta name="theme-color" content="#a60505">
+    <title>#VAItchê - Mobilidade Urbana Inteligente</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="logo" onclick="scrollToSection('home')">
-                <img src="img/logo/logo.png" alt="#VAITCHÊ" loading="lazy" style="width: 135px; height: auto;">
+    <!-- Header com scroll behavior melhorado -->
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo" onclick="scrollToSection('home')" aria-label="Vaitchê - Página inicial">
+                <img src="img/logo/logo.png" alt="#VAITCHÊ" width="135" height="auto">
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a onclick="scrollToSection('home')">Início</a></li>
-                <li><a onclick="scrollToSection('recursos')">Recursos</a></li>
-                <li><a onclick="scrollToSection('como-funciona')">Como Funciona</a></li>
-                <li><a onclick="scrollToSection('parceiro')">Seja Parceiro</a></li>
-                <li><a onclick="scrollToSection('download')">Download</a></li>
+            
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a onclick="scrollToSection('home')" tabindex="0">Início</a></li>
+                <li><a onclick="scrollToSection('recursos')" tabindex="0">Recursos</a></li>
+                <li><a onclick="scrollToSection('como-funciona')" tabindex="0">Como Funciona</a></li>
+                <li><a onclick="scrollToSection('parceiro')" tabindex="0">Seja Parceiro</a></li>
+                <li><a onclick="scrollToSection('download')" tabindex="0">Download</a></li>
             </ul>
-            <button class="cta-button" onclick="scrollToSection('download')">Baixar App</button>
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            
+            <button class="cta-button" onclick="scrollToSection('download')" aria-label="Baixar aplicativo">
+                Baixar App
+            </button>
+            
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu de navegação" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </nav>
     </header>
 
-    <section id="home">
-        <div class="hero-content">
-            <div class="hero-text">
+    <!-- Hero Section com parallax effect -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right">
                 <h1>
                     Mobilidade Urbana
-                    <span>#VAITCHÊ</span>
+                    <span class="gradient-text">#VAITCHÊ</span>
                 </h1>
-                <p>Conectando motociclistas entregadores e passageiros com rapidez, segurança e eficiência. A revolução da mobilidade urbana chegou na Rainha da Fronteira!</p>
+                <p class="hero-subtitle">
+                    Conectando motociclistas entregadores e passageiros com rapidez, segurança e eficiência. 
+                    A revolução da mobilidade urbana chegou na Rainha da Fronteira!
+                </p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="scrollToSection('download')">Baixar Agora</button>
-                    <button class="btn-secondary" onclick="scrollToSection('como-funciona')">Saiba Mais</button>
+                    <button class="btn btn-primary" onclick="scrollToSection('download')">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        Baixar Agora
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('como-funciona')">
+                        Saiba Mais
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="img/mockup-home.png" alt="Mockup real do app #VAITCHÊ mostrando a tela do motociclista"  style="width:450px;max-width:100%;height:auto;display:block;" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <section id="recursos">
-        <h2 class="section-title">Por que escolher o <span>#VAITCHÊ</span>?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                    </svg>
-                </div>
-                <h3>Rapidez Incomparável</h3>
-                <p>Chegue ao seu destino mais rápido com nossos motociclistas especializados em rotas urbanas eficientes.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </div>
-                <h3>Segurança em Primeiro</h3>
-                <p>Todos os motociclistas são verificados e treinados. Viaje com tranquilidade e proteção garantida.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 6v6l4 2"/>
-                    </svg>
-                </div>
-                <h3>Preços Justos</h3>
-                <p>Tarifas transparentes e competitivas. Sem surpresas, você sabe quanto vai pagar antes de solicitar.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                        <line x1="12" y1="18" x2="12.01" y2="18"/>
-                    </svg>
-                </div>
-                <h3>App Intuitivo</h3>
-                <p>Interface simples e fácil de usar. Solicite sua corrida em poucos toques.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                    </svg>
-                </div>
-                <h3>Avaliações</h3>
-                <p>Sistema de avaliação mútua para garantir a melhor experiência para todos os usuários.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                </div>
-                <h3>Sustentável</h3>
-                <p>Contribua para um trânsito mais fluido e redução de emissões com transporte eficiente.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="como-funciona">
-        <h2 class="section-title">Como <span>Funciona</span>?</h2>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Baixe o App</h3>
-                <p>Faça o download gratuito do #VAITCHÊ na sua loja de aplicativos favorita.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Cadastre-se</h3>
-                <p>Crie sua conta rapidamente com dados básicos e forma de pagamento.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Solicite Corrida</h3>
-                <p>Informe seu destino e confirme. Um motociclista chegará em minutos!</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Chegue Rápido</h3>
-                <p>Aproveite a agilidade do transporte de moto e chegue ao seu destino!</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="parceiro">
-        <div class="parceiro-container">
-            <div class="parceiro-image">
-                <img src="img/img_motociclista.png" alt="Motociclista Parceiro" style="width:100%;max-width:100%;height:auto;display:block;object-fit:contain;" loading="lazy">
-            </div>
-            <div class="parceiro-content">
-                <h2>Gostaria de ser um <span>motociclista parceiro?</span></h2>
-                <p>Junte-se à nossa rede de parceiros e tenha autonomia para trabalhar quando e onde quiser. Maximize seus ganhos com tecnologia de ponta!</p>
                 
-                <div class="parceiro-benefits">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                            </svg>
-                        </div>
-                        <span class="benefit-text">Ganhe até 30% a mais que outros apps</span>
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Usuários Ativos</span>
                     </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5"/>
-                                <path d="M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <span class="benefit-text">Flexibilidade total de horários</span>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Motociclistas</span>
                     </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
-                        </div>
-                        <span class="benefit-text">Receba seus ganhos na hora</span>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <span class="benefit-text">Suporte dedicado 24/7</span>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">Avaliação</span>
                     </div>
                 </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left">
+                <div class="phone-mockup-container">
+                    <img src="img/mockup-home.png" 
+                         alt="Mockup do app Vaitchê mostrando interface do motociclista" 
+                         class="phone-mockup-img"
+                         loading="eager">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" onclick="scrollToSection('recursos')">
+            <span>Role para explorar</span>
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
 
-                <a href="#download" class="btn-parceiro" onclick="scrollToSection('download')">Baixar App e Começar Agora</a>
+    <!-- Recursos Section -->
+    <section id="recursos" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Vantagens</span>
+                <h2 class="section-title">
+                    Por que escolher o <span class="gradient-text">#VAITCHÊ</span>?
+                </h2>
+                <p class="section-subtitle">
+                    Tecnologia de ponta para uma experiência de mobilidade incomparável
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Rapidez Incomparável</h3>
+                    <p>Chegue ao seu destino mais rápido com nossos motociclistas especializados em rotas urbanas eficientes.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Segurança em Primeiro</h3>
+                    <p>Todos os motociclistas são verificados e treinados. Viaje com tranquilidade e proteção garantida.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Preços Justos</h3>
+                    <p>Tarifas transparentes e competitivas. Sem surpresas, você sabe quanto vai pagar antes de solicitar.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>App Intuitivo</h3>
+                    <p>Interface simples e fácil de usar. Solicite sua corrida em poucos toques.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Avaliações</h3>
+                    <p>Sistema de avaliação mútua para garantir a melhor experiência para todos os usuários.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon gradient-bg">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Sustentável</h3>
+                    <p>Contribua para um trânsito mais fluido e redução de emissões com transporte eficiente.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="download">
-        <h2 class="section-title">Baixe Agora o <span style="color: var(--yellow);">#VAITCHÊ</span></h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Disponível para iOS e Android</p>
-        <div class="download-buttons">
-            <a href="#" class="app-button" aria-label="App Store">
-                <img src="img/logo/app-store.png" alt="Disponível na App Store" class="app-badge"
-                     style="width: 75px;px;height:auto;display:block;" loading="lazy">
-            </a>
-            <a href="#" class="app-button" aria-label="Google Play">
-                <img src="img/logo/playstore.png" alt="Disponível no Google Play" class="app-badge"
-                     style="width: 75px;px;height:auto;display:block;" loading="lazy">
-            </a>
+    <!-- Como Funciona Section -->
+    <section id="como-funciona" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simples e Rápido</span>
+                <h2 class="section-title">Como <span class="gradient-text">Funciona</span>?</h2>
+                <p class="section-subtitle">
+                    Em apenas 4 passos você está pronto para usar o Vaitchê
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Baixe o App</h3>
+                        <p>Faça o download gratuito do #VAItchê na sua loja de aplicativos favorita.</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Cadastre-se</h3>
+                        <p>Crie sua conta rapidamente com dados básicos e forma de pagamento.</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Solicite Corrida</h3>
+                        <p>Informe seu destino e confirme. Um motociclista chegará em minutos!</p>
+                    </div>
+                    <div class="step-line"></div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Chegue Rápido</h3>
+                        <p>Aproveite a agilidade do transporte de moto e chegue ao seu destino!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Parceiro Section -->
+    <section id="parceiro" class="section-light">
+        <div class="container">
+            <div class="parceiro-container">
+                <div class="parceiro-image" data-aos="fade-right">
+                    <img src="img/img_motociclista.png" 
+                         alt="Motociclista parceiro do Vaitchê" 
+                         loading="lazy">
+                </div>
+                
+                <div class="parceiro-content" data-aos="fade-left">
+                    <span class="section-badge">Faça Parte</span>
+                    <h2>Gostaria de ser um <span class="gradient-text">motociclista parceiro?</span></h2>
+                    <p>Junte-se à nossa rede de parceiros e tenha autonomia para trabalhar quando e onde quiser. Maximize seus ganhos com tecnologia de ponta!</p>
+                    
+                    <div class="parceiro-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon gradient-bg">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <span class="benefit-text">Ganhe até 30% a mais</span>
+                                <span class="benefit-subtext">que outros apps</span>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon gradient-bg">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <span class="benefit-text">Flexibilidade total</span>
+                                <span class="benefit-subtext">de horários</span>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon gradient-bg">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <span class="benefit-text">Receba na hora</span>
+                                <span class="benefit-subtext">seus ganhos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon gradient-bg">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <span class="benefit-text">Suporte dedicado</span>
+                                <span class="benefit-subtext">24/7 para você</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#download" class="btn btn-gradient" onclick="scrollToSection('download')">
+                        Baixar App e Começar Agora
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="section-download">
+        <div class="container">
+            <div class="download-content" data-aos="zoom-in">
+                <span class="section-badge">Disponível Agora</span>
+                <h2 class="section-title">Baixe Agora o <span class="gradient-text">#VAITCHÊ</span></h2>
+                <p class="section-subtitle">Disponível para iOS e Android</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="app-button" aria-label="Baixar na App Store">
+                        <img src="img/logo/app-store.png" 
+                             alt="Disponível na App Store" 
+                             width="150" 
+                             height="auto" 
+                             loading="lazy">
+                    </a>
+                    <a href="#" class="app-button" aria-label="Baixar no Google Play">
+                        <img src="img/logo/playstore.png" 
+                             alt="Disponível no Google Play" 
+                             width="150" 
+                             height="auto" 
+                             loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- QR Code opcional -->
+                <div class="qr-code-section">
+                    <p class="qr-label">Ou escaneie o QR Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 #VAITCHÊ - Mobilidade Urbana Inteligente. Todos os direitos reservados.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="img/logo/logo.png" alt="#VAITCHÊ" width="120" height="auto">
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a onclick="scrollToSection('home')">Início</a></li>
+                        <li><a onclick="scrollToSection('recursos')">Recursos</a></li>
+                        <li><a onclick="scrollToSection('como-funciona')">Como Funciona</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@vaitchas.com">contato@vaitche.com</a></li>
+                        <li><a href="tel:+5555999999999">(55) 99999-9999</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 #VAITCHÊ - Mobilidade Urbana Inteligente. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToSection('home')" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
